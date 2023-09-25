@@ -13,7 +13,7 @@ CREATE TABLE customers
 
 CREATE TABLE products
 (
-    sku_code     VARCHAR(255) PRIMARY KEY,
+    sku_code     VARCHAR(12) PRIMARY KEY,
     product_name VARCHAR(255) NOT NULL,
     unitPrice    REAL         NOT NULL
 );

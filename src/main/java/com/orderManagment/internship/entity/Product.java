@@ -9,7 +9,7 @@ import lombok.Data;
 public class Product {
     @Id
     @Column(name = "sku_code")
-    private long skuCode;
+    private String skuCode;
     @Column(name = "product_name")
     private String productName;
     @Column(name = "unit_price")
