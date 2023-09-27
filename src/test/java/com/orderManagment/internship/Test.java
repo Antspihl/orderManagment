@@ -1,12 +1,11 @@
 package com.orderManagment.internship;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Run {
+class Test {
 
-	@Test
+	@org.junit.jupiter.api.Test
 	void contextLoads() {
 	}
 

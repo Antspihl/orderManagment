@@ -9,12 +9,12 @@ import lombok.Data;
 public class OrderLine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "line_id")
+    @Column(name = "line_id", columnDefinition = "SERIAL")
     private long id;
-    @Column(name = "order_id")
+    @Column(name = "order_id", columnDefinition = "INT")
     private long orderId;
-    @Column(name = "product_id")
+    @Column(name = "product_id", columnDefinition = "STRING(12)")
     private long productId;
-    @Column(name = "quantity")
+    @Column(name = "quantity", columnDefinition = "INT")
     private long quantity;
 }
