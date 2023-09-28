@@ -23,9 +23,7 @@ public class OrderService {
     }
 
     public OrderDto addOrder(OrderDto orderDto, List<OrderLineDto> orderLineDtos) {
-        Order order = new Order();
-        order.setOrderDate(orderDto.orderDate());
-        order.setCustomerRegistrationCode(orderDto.customerRegistrationCode());
+        Order order = orderMapper.toEntity(orderDto);
         orderRepository.save(order);
         for (OrderLineDto orderLineDto : orderLineDtos) {
             orderLineService.addOrderLine(orderLineDto, order.getId());

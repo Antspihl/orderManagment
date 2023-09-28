@@ -17,10 +17,7 @@ public class ProductService {
     }
 
     public ProductDto addProduct(ProductDto productDto) {
-        Product product = new Product();
-        product.setProductName(productDto.productName());
-        product.setUnitPrice(productDto.unitPrice());
-        product.setSkuCode(productDto.skuCode());
+        Product product = productMapper.toEntity(productDto);
         productRepository.save(product);
         return productMapper.toDto(product);
     }

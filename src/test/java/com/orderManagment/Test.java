@@ -1,4 +1,4 @@
-package com.orderManagement.internship;
+package com.orderManagment;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
