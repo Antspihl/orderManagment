@@ -28,7 +28,8 @@ public class OrderService {
         order.setCustomerRegistrationCode(orderDto.customerRegistrationCode());
         orderRepository.save(order);
         for (OrderLineDto orderLineDto : orderLineDtos) {
-            orderLineService.addOrderLine(orderLineDto);
+            OrderLineDto orderLineDto1 = new OrderLineDto(order.getId(), orderLineDto.productId(), orderLineDto.quantity());
+            orderLineService.addOrderLine(orderLineDto1);
         }
         return orderMapper.toDto(order);
     }

@@ -1,7 +1,7 @@
 package com.orderManagment.internship.controller;
 
+import com.orderManagment.internship.dto.FullOrder;
 import com.orderManagment.internship.dto.OrderDto;
-import com.orderManagment.internship.dto.OrderLineDto;
 import com.orderManagment.internship.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -15,9 +15,9 @@ import java.util.List;
 public class OrderController {
     private final OrderService orderService;
 
-    @PostMapping("/add/")
-    public OrderDto addOrder(@RequestBody OrderDto orderDto, @RequestParam List<OrderLineDto> orderLineDtos) {
-        return orderService.addOrder(orderDto, orderLineDtos);
+    @PostMapping("")
+    public OrderDto addOrder(@RequestBody FullOrder fullOrder) {
+        return orderService.addOrder(fullOrder.orderDto(), fullOrder.orderLineDtos());
     }
 
     @GetMapping("/date/{date}")

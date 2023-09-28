@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CustomerController {
     private final CustomerService customerService;
 
-    @PostMapping("/add")
+    @PostMapping("")
     public CustomerDto addCustomer(@RequestBody CustomerDto customerDto){
         return customerService.addCustomer(customerDto);
     }

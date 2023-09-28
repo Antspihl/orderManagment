@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductController {
     private final ProductService productService;
 
-    @PostMapping("/add")
+    @PostMapping("")
     public ProductDto addProduct(@RequestBody ProductDto productDto){
         return productService.addProduct(productDto);
     }

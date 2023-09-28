@@ -1,3 +1,5 @@
 package com.orderManagment.internship.dto;
 
-public record OrderDto(String customerRegistrationCode, String orderDate) {}
+import java.sql.Date;
+
+public record OrderDto(long customerRegistrationCode, Date orderDate) {}
